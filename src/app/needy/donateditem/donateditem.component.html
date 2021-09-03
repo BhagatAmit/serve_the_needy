@@ -1,0 +1,37 @@
+
+ <br><br><br><br><br><br><div class="topnav">
+    <button class="back" type="submit" (click)="back()">Back</button>
+    <h1>Donated Items</h1>
+</div>
+
+<body>
+
+<div class="mt-5">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ItemName </th>
+                <th>Quantity</th>
+                <th>Date</th>
+               
+            </tr>
+        </thead>
+       <tbody class="tbody">
+            <tr *ngFor="let donation of donationDetails">
+                
+                <td>{{donation.dName}}</td>
+                <td>{{donation.dQuantity}}</td>
+                <td>{{donation.dDate}}</td>
+               
+
+
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+
+
+
+
+            

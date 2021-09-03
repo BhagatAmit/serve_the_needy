@@ -1,0 +1,108 @@
+
+ 
+               
+                        
+                   
+                   
+         <br><br><br><br><br><br>
+          
+
+<div class="head" class="topnav">
+    <button class="back" type="submit" (click)="back()">Back</button>
+    <h1>Items to Request</h1>
+</div>
+<div class="content">
+
+
+
+    <div fxLayout="row wrap">
+        <div fxFlex="25%" *ngFor="let num of [1,2,3,4,5]">
+
+        </div>
+    </div>
+          
+            
+            <mat-card class="cloths">
+                <mat-card-header>
+                    <mat-card-subtitle>
+                     Request clothes
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <img src="assets/cloths1.jpg" width="70px">
+                    <br>
+                    <br>
+                   
+                </mat-card-content>
+        
+
+            </mat-card>
+            <mat-card class="money">
+                <mat-card-header>
+                    <mat-card-subtitle>
+                        Request Money
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <img src="assets/money.jpg" width="70px">
+                    <br>
+                    <br>
+                   
+                   
+                </mat-card-content>
+
+            </mat-card>
+            <mat-card class="food">
+                <mat-card-header>
+                    <mat-card-subtitle>
+                        Request Food
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <img src="assets/foodser.jpg" width="70px">
+                    <br>
+                    <br>
+                   
+                    
+                    
+                </mat-card-content>
+
+                
+              
+            </mat-card >
+            <mat-card class="other">
+                <mat-card-header>
+                    <mat-card-subtitle>
+                     Medications
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <img src="assets/medical.png" width="100px">
+                    <br>
+                    <br>
+                   
+                    
+                    
+                </mat-card-content>
+              
+            </mat-card >
+
+           
+    <div *ngIf="alert"class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Request Sent
+        <button (click) ="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+              
+            <form class="form" #addForm="ngForm" (ngSubmit) = "add(addForm)">
+                <label class="need" for="name">Notify Needed Items</label>
+                <input type="text" #request (ngModel)="request" name="request" id="request" class="form-control">
+                <br>
+<input type="submit" value="REQUEST" class="btn btn-primary">
+</form>
+        </div>
+        
+
+      
+

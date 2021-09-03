@@ -1,0 +1,88 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1>List of Ngo Members</h1>
+    <button type="button" (click)="clickAddMember()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Add New Member
+    </button>
+  </div>
+</nav>
+<table class="table table-bordered table-striped mt-5">
+  <thead>
+    <tr *ngFor="let modal of memberData">
+      <th scope="col">Member Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Aadhar</th>
+      <th scope="col">Address</th>
+      <th scope="col">Age</th>
+      <th scope="col">Phone No</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span>{{modal.memberId}}</span></td>
+      <td><span>{{modal.memberName}}</span></td>
+      <td><span>{{modal.aadhar}}</span></td>
+      <td><span>{{modal.memberAddress}}</span></td>
+      <td><span>{{modal.memberAge}}</span></td>
+      <td><span>{{modal.memberPhone}}</span></td>
+      <td>
+        <button (click)="OnEdit(modal)" class="btn btn-sm btn-info" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="fa fa-edit"></i>
+        </button>
+        <button (click)="deleteMembers(modal)" class="btn btn-sm btn-danger">
+          <i class="fa fa-remove"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Member Detials</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+            <label for="memberName">Member Name</label>
+            <input type="text" formControlName="memberName" class="form-control" id="memberName"
+              aria-describedby="memberName" placeholder="Enter Your Name">
+          </div>
+          <div class="form-group">
+            <label for="aadhar">Aadhar Number</label>
+            <input type="number" formControlName="aadhar" class="form-control" id="aadhar" aria-describedby="aadhar"
+              placeholder="Enter Your Aadhar Number">
+          </div>
+          <div class="form-group">
+            <label for="memberAddress">Member Address</label>
+            <input type="text" formControlName="memberAddress" class="form-control" id="memberAddress"
+              aria-describedby="memberAddress" placeholder="Enter Your Address">
+          </div>
+          <div class="form-group">
+            <label for="memberAge">Member Age</label>
+            <input type="number" formControlName="memberAge" class="form-control" id="memberAge"
+              aria-describedby="memberAge" placeholder="Enter Your Age">
+          </div>
+          <div class="form-group">
+            <label for="memberPhone">Member Phone</label>
+            <input type="number" formControlName="memberPhone" class="form-control" id="memberPhone"
+              aria-describedby="memberPhone" placeholder="Enter Your Phone Number">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" *ngIf="showAdd" (click)="postMemberDetials()" class="btn btn-primary">Add Member</button>
+        <button type="button" *ngIf="showUpdate" (click)="updateMemberDetials()" class="btn btn-primary">Update Member</button>
+      </div>
+    </div>
+  </div>
+</div>

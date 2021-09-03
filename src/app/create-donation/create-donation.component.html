@@ -1,0 +1,26 @@
+<h3>Make  Donation</h3>
+
+  <form [formGroup]="donation" (ngSubmit)="getdonation()">
+   <!--  <div class="form-group">
+        <label for="name">Donation ID</label>
+        <input type="number" class="form-control" id="dId" required  name="dId" formControlName="dId">
+      </div> -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="dName" required  name="dName" formControlName="dName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Quantity</label>
+      <input type="number" class="form-control" id="dQuantity" required  name="dQuantity" formControlName="dQuantity">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Date</label>
+      <input type="text" class="form-control" id="dDate" required  name="dDate" formControlName="dDate">
+    </div>
+    
+
+    <button class="btn btn-success">Submit</button>
+  </form>
+

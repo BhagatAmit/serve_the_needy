@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.rating{
+    
+    position: relative;
+    top: 50%;
+    left: -300;
+    transform: translate(-50%,-50%) rotateY(180deg);
+    display: flex;
+}
+
+.rating input{
+display: none;
+}
+.rating label{
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    background-color: #ccc;
+}
+.rating label:before{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 50px;
+    color: #101010;
+
+}
+.rating label:after{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 50px;
+    color: orange;
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);;
+
+}
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after{
+    opacity: 1;
+
+}
+
+.btn{
+    position: relative;
+    bottom: -10px;
+    left: 20px;
+    font-size: large;
+    background-color: gray;
+}
+input#star1:checked ~ label{
+    color:#fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+#star1:checked ~ form header:before{
+    content:"I dont like it"
+}
+
+
+.box{
+    position:relative;
+    bottom: -300px;
+    left:-100px ;
+}
+
+.form{
+    position: relative;
+    bottom: -300px;
+}
+.name{
+    position: reative;
+    bottom:-100px;
+}
+
+.rate{
+    position: relative;
+    left: 100px;
+}
+first{
+
+    font-size: larger;
+}
+.sta{
+    color: red;
+    font-size: larger;
+}

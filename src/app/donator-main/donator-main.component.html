@@ -1,0 +1,52 @@
+<div>
+  
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark" *ngIf='showNav' >
+      <ul class="navbar-nav">
+          
+        <li class="nav-item active">
+          <a class="navbar-brand" href="#"></a>
+        </li>
+        
+  
+      <!--   <li class="nav-item">
+          <a class="nav-link"  routerLink="/add" routerLinkActive="active"><h4><b>Add Donation</b></h4></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/donations" routerLinkActive="active"><h4><b>Donation List</b></h4></a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/register" routerLinkActive="active"><h4><b>Register</b></h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/login" routerLinkActive="active"><h4><b>Sign In</b></h4></a>
+              </li>
+    
+  
+      </ul>
+  
+    </nav>
+    <div class="container">
+      <br>
+      
+        
+      <div class="container">
+      <h1 style ="text-align: center ;color:blue;background-color: rgb(124, 157, 170);">Serve The Needy</h1>
+    </div>
+      <h2 style="text-align: center"><b>Alone we can do so little,together we can do so much!!</b></h2><br><hr>
+      <h3 style="text-align: center;"><b>Your Small Donation can bring Thousands of smiles</b></h3>
+      <hr>  
+      <div class="card">
+        <div class="card-body">
+      <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+ 
+  <button  class="btn btn-success" routerLink="/login">Explore</button>
+<div>
+<img [src]="myimage" alt="">
+</div>
+ 
+  

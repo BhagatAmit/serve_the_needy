@@ -1,0 +1,20 @@
+h1{
+    color:rgb(75, 68, 68);
+}
+
+.navbar-light{
+    background-color: grey;
+}
+
+.btn{
+    position: relative;
+    left: 600px;
+}
+body{
+  
+    background-image: url("https://st4.depositphotos.com/20069414/38618/v/380/depositphotos_386180112-stock-illustration-helping-hands-black-symbol-white.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}

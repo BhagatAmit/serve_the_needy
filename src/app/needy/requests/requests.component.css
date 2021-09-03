@@ -1,0 +1,32 @@
+.style{
+    font-style: italic;
+    color: rgb(199, 9, 9);
+    font-size: larger;
+    font-weight: bolder;
+
+}
+
+.topnav{
+    background-color: rgb(155, 80, 95);
+}
+
+    body{
+   
+   
+        background-image: url("https://www.strategy-business.com/media/image/41330163_thumb5_690x400.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 90%;
+        
+    }
+
+
+.back{
+    position: relative;
+    left: 1400px;
+    bottom: 15px;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(11, 34, 22);
+}

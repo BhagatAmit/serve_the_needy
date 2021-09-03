@@ -1,0 +1,25 @@
+.full-width{
+    width: 100%;
+    
+}
+.reset{
+    margin-left: 100px;
+    margin-top: -50px;
+}
+
+
+.container{
+    position: relative;
+    bottom:0px;
+
+  
+}
+body{
+   
+     background-color: lightblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: 100%;
+
+}

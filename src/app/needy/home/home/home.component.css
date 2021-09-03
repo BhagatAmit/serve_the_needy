@@ -1,0 +1,58 @@
+
+
+
+.money{
+    position:relative;
+    bottom:150px;
+    left:600px;
+   
+   
+   
+} 
+.food{
+    position:relative;
+    bottom: 100px;
+    left:0px;
+
+} 
+
+
+.content{
+    padding:16px;
+    background-color: cadetblue;
+}
+.content>mat-card{
+    width: 400px;
+}
+.other{
+    position:relative;
+    bottom: 250px;
+    left:600px;
+
+
+}
+
+.form{
+    position: relative;
+    bottom: 200px;
+
+}
+.need{
+    font-size: larger;
+    font-style: italic;
+}
+.head{
+    background: red;
+}
+.topnav{
+    background-color: gray;
+}
+
+.back{
+    position: relative;
+    left: 1400px;
+    bottom: -20px;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(11, 34, 22);
+}
